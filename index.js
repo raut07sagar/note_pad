@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
 
 const User = new mongoose.model("User", userSchema)
 
+app.get("/",(req,res)=>{
+res.send("server start")
+})
+
 //Routes
 app.post("/login", (req, res)=> {
     const { email, password} = req.body
